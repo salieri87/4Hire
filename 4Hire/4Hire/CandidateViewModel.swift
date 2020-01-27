@@ -11,9 +11,24 @@ import Foundation
 struct CandidateViewModel {
     private var candidate: Candidate
     
+    /// Candidate's full name.
     var name: String {
         get {
             candidate.firstName + " " + candidate.lastName
+        }
+    }
+
+    /// Candidate's list of past and current employments.
+    var experience: [Position] {
+        get {
+            candidate.experience ?? [Position]()
+        }
+    }
+
+    /// Candidate's list of past and current faculties.
+    var education: [Education] {
+        get {
+            candidate.education ?? [Education]()
         }
     }
     
