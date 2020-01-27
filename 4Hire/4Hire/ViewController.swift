@@ -9,12 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var viewModel = CandidateViewModel.mock()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        navigationItem.title = viewModel.name
     }
-
-
 }
-
