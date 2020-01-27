@@ -8,36 +8,45 @@
 
 import Foundation
 
-struct CandidateViewModel {
+class CandidateViewModel: NSObject {
     private var candidate: Candidate
-    
+
     /// Candidate's full name.
     var name: String {
-        get {
-            candidate.firstName + " " + candidate.lastName
-        }
+        candidate.firstName + " " + candidate.lastName
     }
 
     /// Candidate's list of past and current employments.
     var experience: [Position] {
-        get {
-            candidate.experience ?? [Position]()
-        }
+        candidate.experience ?? [Position]()
     }
 
     /// Candidate's list of past and current faculties.
     var education: [Education] {
-        get {
-            candidate.education ?? [Education]()
-        }
+        candidate.education ?? [Education]()
     }
-    
-    init(candidate: Candidate) {
+
+    required init(candidate: Candidate) {
         self.candidate = candidate
     }
-    
+
     // MARK: - Debuging
+
     static func mock() -> Self {
-        Self(candidate: Candidate(identifier: 1, firstName: "John", lastName: "Appleseed", experience: nil, education: nil))
+        let experience = [Position(name: "junior",
+                                   company: "Somewhere",
+                                   startedAt: Date.distantPast,
+                                   finishedAt: nil,
+                                   jobDescription: "just being junior")]
+        let education = [Education(school: "AGH",
+                                   startedAt: Date.distantPast,
+                                   finishedAt: nil,
+                                   course: "Computer Science")]
+
+        return Self(candidate: Candidate(identifier: 1,
+                                         firstName: "John",
+                                         lastName: "Appleseed",
+                                         experience: experience,
+                                         education: education))
     }
 }
