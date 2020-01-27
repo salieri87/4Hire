@@ -16,6 +16,7 @@
 		EC65650923DF72B8006B80DF /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650823DF72B8006B80DF /* Candidate.swift */; };
 		EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650A23DF73DC006B80DF /* CandidateTests.swift */; };
 		EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */; };
+		EC65650F23DFA1F7006B80DF /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		EC65650823DF72B8006B80DF /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		EC65650A23DF73DC006B80DF /* CandidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateTests.swift; sourceTree = "<group>"; };
 		EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateViewModel.swift; sourceTree = "<group>"; };
+		EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				EC6564FD23DF707F006B80DF /* _HireTests.swift */,
 				EC65650A23DF73DC006B80DF /* CandidateTests.swift */,
+				EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */,
 				EC6564FF23DF707F006B80DF /* Info.plist */,
 			);
 			path = 4HireTests;
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC65650F23DFA1F7006B80DF /* ViewControllerTests.swift in Sources */,
 				EC6564FE23DF707F006B80DF /* _HireTests.swift in Sources */,
 				EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */,
 			);
