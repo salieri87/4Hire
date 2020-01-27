@@ -37,7 +37,7 @@ struct Position: Decodable {
 /// Wrapper for education background.
 struct Education: Decodable {
     var school: String
-    var startedAt: String
-    var finishedAt: String?
+    var startedAt: Date
+    var finishedAt: Date?
     var course: String
 }

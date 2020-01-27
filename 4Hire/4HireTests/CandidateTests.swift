@@ -59,4 +59,44 @@ class CandidateTests: XCTestCase {
         // Then
         XCTAssertNotEqual(candidate1, candidate2)
     }
+    
+    // MARK: - Position
+    
+    func test_position_hasCorrectValues() {
+        // Given
+        let name = "iOS Developer"
+        let company = "HSBC"
+        let startedAt = Date.distantPast
+        let finishedAt = Date(timeInterval: 10000, since: startedAt)
+        let jobDescription = "Coding super banking app"
+        
+        // When
+        let position = Position(name: name, company: company, startedAt: startedAt, finishedAt: finishedAt, jobDescription: jobDescription)
+        
+        // Then
+        XCTAssertEqual(position.name, "iOS Developer")
+        XCTAssertEqual(position.company, "HSBC")
+        XCTAssertEqual(position.startedAt, Date.distantPast)
+        XCTAssertEqual(position.finishedAt, finishedAt)
+        XCTAssertEqual(position.jobDescription, "Coding super banking app")
+    }
+    
+    // MARK: - Education
+    
+    func test_education_hasCorrectValues() {
+        // Given
+        let school = "University Of iOS Development"
+        let startedAt = Date.distantPast
+        let finishedAt: Date? = nil
+        let course = "Apple technologies"
+        
+        // When
+        let study = Education(school: school, startedAt: startedAt, finishedAt: finishedAt, course: course)
+        
+        // Then
+        XCTAssertEqual(study.school, "University Of iOS Development")
+        XCTAssertEqual(study.startedAt, Date.distantPast)
+        XCTAssertNil(study.finishedAt)
+        XCTAssertEqual(study.course, "Apple technologies")
+    }
 }
