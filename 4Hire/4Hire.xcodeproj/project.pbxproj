@@ -17,6 +17,8 @@
 		EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650A23DF73DC006B80DF /* CandidateTests.swift */; };
 		EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */; };
 		EC65650F23DFA1F7006B80DF /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */; };
+		EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */; };
+		EC65651A23E0AD62006B80DF /* LocalNetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		EC65650A23DF73DC006B80DF /* CandidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateTests.swift; sourceTree = "<group>"; };
 		EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateViewModel.swift; sourceTree = "<group>"; };
 		EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkingManager.swift; sourceTree = "<group>"; };
+		EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkingManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 				EC6564F423DF707F006B80DF /* Info.plist */,
 				EC65650823DF72B8006B80DF /* Candidate.swift */,
 				EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */,
+				EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */,
 			);
 			path = 4Hire;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 				EC6564FD23DF707F006B80DF /* _HireTests.swift */,
 				EC65650A23DF73DC006B80DF /* CandidateTests.swift */,
 				EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */,
+				EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */,
 				EC6564FF23DF707F006B80DF /* Info.plist */,
 			);
 			path = 4HireTests;
@@ -209,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */,
 				EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */,
 				EC65650923DF72B8006B80DF /* Candidate.swift in Sources */,
 				EC6564EB23DF707D006B80DF /* ViewController.swift in Sources */,
@@ -223,6 +230,7 @@
 				EC65650F23DFA1F7006B80DF /* ViewControllerTests.swift in Sources */,
 				EC6564FE23DF707F006B80DF /* _HireTests.swift in Sources */,
 				EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */,
+				EC65651A23E0AD62006B80DF /* LocalNetworkingManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
