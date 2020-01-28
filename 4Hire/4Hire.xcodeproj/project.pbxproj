@@ -22,6 +22,7 @@
 		EC65651E23E0C92C006B80DF /* candidate_malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = EC65651D23E0C92C006B80DF /* candidate_malformed.json */; };
 		EC65652023E0CB77006B80DF /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651F23E0CB77006B80DF /* Mocks.swift */; };
 		EC65652223E0D45D006B80DF /* candidate.json in Resources */ = {isa = PBXBuildFile; fileRef = EC65652123E0D45C006B80DF /* candidate.json */; };
+		EC65652623E0DE72006B80DF /* ExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		EC65651F23E0CB77006B80DF /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		EC65652123E0D45C006B80DF /* candidate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidate.json; sourceTree = "<group>"; };
 		EC65652423E0DB6E006B80DF /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				EC6564F423DF707F006B80DF /* Info.plist */,
 				EC65650823DF72B8006B80DF /* Candidate.swift */,
 				EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */,
+				EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */,
 				EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */,
 				EC65652123E0D45C006B80DF /* candidate.json */,
 				EC65652423E0DB6E006B80DF /* CHANGELOG.md */,
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC65652623E0DE72006B80DF /* ExperienceViewModel.swift in Sources */,
 				EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */,
 				EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */,
 				EC65650923DF72B8006B80DF /* Candidate.swift in Sources */,
