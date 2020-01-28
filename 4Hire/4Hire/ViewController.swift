@@ -33,6 +33,15 @@ struct Layout {
     enum Section: Int {
         case experience
         case faculties
+        
+        var title: String? {
+            switch self {
+            case .experience:
+                return "Experience"
+            case .faculties:
+                return "Education"
+            }
+        }
     }
 }
 
@@ -70,13 +79,6 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case Layout.Section.experience.rawValue:
-            return "Experience"
-        case Layout.Section.faculties.rawValue:
-            return "Education"
-        default:
-            return nil
-        }
+        Layout.Section(rawValue: section)?.title
     }
 }
