@@ -12,11 +12,23 @@ struct ResponseRoot: Decodable {
     var data: Candidate
 }
 
-enum FetchingError: Swift.Error {
+enum FetchingError: Swift.Error, Equatable {
     case unknown
     case invalidURL
     case parsingFailed
     case downloadFailed
+    
+    static func ==(lhs: Self, rhs: Self) -> Bool {
+        switch (lhs, rhs) {
+        case (.unknown, .unknown): fallthrough
+        case (.invalidURL, .invalidURL): fallthrough
+        case (.parsingFailed, .parsingFailed): fallthrough
+        case (.downloadFailed, .downloadFailed):
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 protocol NetworkingManager {
@@ -31,7 +43,7 @@ class LocalNetworkingManager : NetworkingManager{
     /// Downloads candidate's details.
     /// - Parameter completion: Completion containing fetching result.
     func downloadCandidate(completion: @escaping (LocalNetworkingManager.FetchResult) -> Void) {
-        guard let url = Bundle.main.url(forResource: "candidate", withExtension: "json") else {
+        guard let url = Bundle(for: type(of: self)).url(forResource: "candidate", withExtension: "json") else {
             completion(.failure(.invalidURL))
             return
         }
