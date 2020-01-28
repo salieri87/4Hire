@@ -22,7 +22,7 @@ class ViewControllerTests: XCTestCase {
     func test_loadedViewController_hasCorrectContent() {
         // Given
         let rowsForEducation = CandidateViewModel.mock().education.count
-        let rowsForExperience = CandidateViewModel.mock().experience.count
+        let rowsForExperience = CandidateViewModel.mock().experienceViewModels.count
         
         // When
         viewController.viewModel = CandidateViewModel.mock()

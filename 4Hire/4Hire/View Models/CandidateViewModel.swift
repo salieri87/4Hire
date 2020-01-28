@@ -16,9 +16,9 @@ class CandidateViewModel: NSObject {
         candidate.firstName + " " + candidate.lastName
     }
 
-    /// Candidate's list of past and current employments.
-    var experience: [Position] {
-        candidate.experience ?? [Position]()
+    /// View models collection of past and current employments.
+    var experienceViewModels: [ExperienceViewModel] {
+        candidate.experience?.map{ ExperienceViewModel(position: $0) } ?? [ExperienceViewModel]()
     }
 
     /// Candidate's list of past and current faculties.

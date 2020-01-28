@@ -59,7 +59,7 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case Layout.Section.experience.rawValue:
-            return experience.count
+            return experienceViewModels.count
         case Layout.Section.faculties.rawValue:
             return education.count
         default:
@@ -77,7 +77,7 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.section {
             case Layout.Section.experience.rawValue:
                 cell.textLabel?.text = "Position"
-                cell.detailTextLabel?.text = experience[indexPath.row].name
+                cell.detailTextLabel?.text = experienceViewModels[indexPath.row].shortDescription
             case Layout.Section.faculties.rawValue:
                 cell.textLabel?.text = "School"
                 cell.detailTextLabel?.text = education[indexPath.row].school

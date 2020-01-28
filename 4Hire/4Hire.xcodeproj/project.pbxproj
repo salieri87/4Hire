@@ -105,8 +105,7 @@
 				EC6564F123DF707F006B80DF /* LaunchScreen.storyboard */,
 				EC6564F423DF707F006B80DF /* Info.plist */,
 				EC65650823DF72B8006B80DF /* Candidate.swift */,
-				EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */,
-				EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */,
+				EC65652923E0FCDE006B80DF /* View Models */,
 				EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */,
 				EC65652123E0D45C006B80DF /* candidate.json */,
 				EC65652423E0DB6E006B80DF /* CHANGELOG.md */,
@@ -126,6 +125,15 @@
 				EC6564FF23DF707F006B80DF /* Info.plist */,
 			);
 			path = 4HireTests;
+			sourceTree = "<group>";
+		};
+		EC65652923E0FCDE006B80DF /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */,
+				EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
