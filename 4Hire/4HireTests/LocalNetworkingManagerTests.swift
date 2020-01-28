@@ -57,14 +57,4 @@ class LocalNetworkingManagerTests: XCTestCase {
         }
         waitForExpectations(timeout: networkingResponseTimeout, handler: nil)
     }
-    
-    /// Returns stubbed `Candidate` model based on test file content.
-    func stubModel() -> Candidate {
-        return Candidate(identifier: 100,
-                         firstName: "David",
-                         lastName: "von Test",
-                         experience: nil,
-                         education: nil)
-    }
-
 }

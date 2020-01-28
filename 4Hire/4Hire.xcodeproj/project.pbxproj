@@ -19,6 +19,9 @@
 		EC65650F23DFA1F7006B80DF /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */; };
 		EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */; };
 		EC65651A23E0AD62006B80DF /* LocalNetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */; };
+		EC65651C23E0C91B006B80DF /* candidate_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EC65651B23E0C91B006B80DF /* candidate_test.json */; };
+		EC65651E23E0C92C006B80DF /* candidate_malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = EC65651D23E0C92C006B80DF /* candidate_malformed.json */; };
+		EC65652023E0CB77006B80DF /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651F23E0CB77006B80DF /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkingManager.swift; sourceTree = "<group>"; };
 		EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkingManagerTests.swift; sourceTree = "<group>"; };
+		EC65651B23E0C91B006B80DF /* candidate_test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidate_test.json; sourceTree = "<group>"; };
+		EC65651D23E0C92C006B80DF /* candidate_malformed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidate_malformed.json; sourceTree = "<group>"; };
+		EC65651F23E0CB77006B80DF /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				EC65650A23DF73DC006B80DF /* CandidateTests.swift */,
 				EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */,
 				EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */,
+				EC65651F23E0CB77006B80DF /* Mocks.swift */,
+				EC65651B23E0C91B006B80DF /* candidate_test.json */,
+				EC65651D23E0C92C006B80DF /* candidate_malformed.json */,
 				EC6564FF23DF707F006B80DF /* Info.plist */,
 			);
 			path = 4HireTests;
@@ -205,6 +214,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC65651C23E0C91B006B80DF /* candidate_test.json in Resources */,
+				EC65651E23E0C92C006B80DF /* candidate_malformed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +242,7 @@
 				EC6564FE23DF707F006B80DF /* _HireTests.swift in Sources */,
 				EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */,
 				EC65651A23E0AD62006B80DF /* LocalNetworkingManagerTests.swift in Sources */,
+				EC65652023E0CB77006B80DF /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
