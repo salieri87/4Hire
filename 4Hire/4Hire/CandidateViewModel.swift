@@ -50,3 +50,15 @@ class CandidateViewModel: NSObject {
                                          education: education))
     }
 }
+
+struct CandidateViewModelFactory {
+    static func getViewModel(completion: @escaping (CandidateViewModel?) -> Void) {
+        LocalNetworkingManager.sharedManager.downloadCandidate { (result) in
+            if case let .success(response) = result {
+                completion(CandidateViewModel(candidate: response))
+            } else {
+                completion(nil)
+            }
+        }
+    }
+}

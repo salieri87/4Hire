@@ -9,15 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var viewModel = CandidateViewModel.mock()
+    var viewModel: CandidateViewModel? {
+        didSet {
+            self.tableView.reloadData()
+            navigationItem.title = viewModel?.name
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = viewModel.name
+        navigationItem.title = "n/a"
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
         tableView.reloadData()
+        
+        CandidateViewModelFactory.getViewModel { (viewModel) in
+            self.viewModel = viewModel
+        }
     }
 }
 
