@@ -54,6 +54,7 @@
 		EC65651D23E0C92C006B80DF /* candidate_malformed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidate_malformed.json; sourceTree = "<group>"; };
 		EC65651F23E0CB77006B80DF /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		EC65652123E0D45C006B80DF /* candidate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidate.json; sourceTree = "<group>"; };
+		EC65652423E0DB6E006B80DF /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 				EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */,
 				EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */,
 				EC65652123E0D45C006B80DF /* candidate.json */,
+				EC65652423E0DB6E006B80DF /* CHANGELOG.md */,
 			);
 			path = 4Hire;
 			sourceTree = "<group>";
