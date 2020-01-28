@@ -12,7 +12,6 @@
 		EC6564EE23DF707D006B80DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6564EC23DF707D006B80DF /* Main.storyboard */; };
 		EC6564F023DF707F006B80DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6564EF23DF707F006B80DF /* Assets.xcassets */; };
 		EC6564F323DF707F006B80DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6564F123DF707F006B80DF /* LaunchScreen.storyboard */; };
-		EC6564FE23DF707F006B80DF /* _HireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6564FD23DF707F006B80DF /* _HireTests.swift */; };
 		EC65650923DF72B8006B80DF /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650823DF72B8006B80DF /* Candidate.swift */; };
 		EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650A23DF73DC006B80DF /* CandidateTests.swift */; };
 		EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */; };
@@ -44,7 +43,6 @@
 		EC6564F223DF707F006B80DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC6564F423DF707F006B80DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC6564F923DF707F006B80DF /* 4HireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4HireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC6564FD23DF707F006B80DF /* _HireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _HireTests.swift; sourceTree = "<group>"; };
 		EC6564FF23DF707F006B80DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC65650823DF72B8006B80DF /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		EC65650A23DF73DC006B80DF /* CandidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateTests.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 		EC6564FC23DF707F006B80DF /* 4HireTests */ = {
 			isa = PBXGroup;
 			children = (
-				EC6564FD23DF707F006B80DF /* _HireTests.swift */,
 				EC65650A23DF73DC006B80DF /* CandidateTests.swift */,
 				EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */,
 				EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */,
@@ -243,7 +240,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC65650F23DFA1F7006B80DF /* ViewControllerTests.swift in Sources */,
-				EC6564FE23DF707F006B80DF /* _HireTests.swift in Sources */,
 				EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */,
 				EC65651A23E0AD62006B80DF /* LocalNetworkingManagerTests.swift in Sources */,
 				EC65652023E0CB77006B80DF /* Mocks.swift in Sources */,
