@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     var viewModel: CandidateViewModel? {
         didSet {
-            self.tableView.reloadData()
             navigationItem.title = viewModel?.name
+            tableView.delegate = viewModel
+            tableView.dataSource = viewModel
+            tableView.reloadData()
         }
     }
     @IBOutlet weak var tableView: UITableView!
@@ -20,9 +22,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "n/a"
-        tableView.delegate = viewModel
-        tableView.dataSource = viewModel
-        tableView.reloadData()
         
         CandidateViewModelFactory.getViewModel { (viewModel) in
             self.viewModel = viewModel

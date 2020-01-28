@@ -24,6 +24,9 @@ class ViewControllerTests: XCTestCase {
         let rowsForEducation = CandidateViewModel.mock().education.count
         let rowsForExperience = CandidateViewModel.mock().experience.count
         
+        // When
+        viewController.viewModel = CandidateViewModel.mock()
+        
         // Then
         XCTAssertEqual(viewController.tableView.numberOfSections, 2)
         XCTAssertEqual(viewController.tableView.numberOfRows(inSection: Layout.Section.faculties.rawValue), rowsForEducation)
