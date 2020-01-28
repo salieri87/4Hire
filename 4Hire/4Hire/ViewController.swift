@@ -12,9 +12,11 @@ class ViewController: UIViewController {
     var viewModel: CandidateViewModel? {
         didSet {
             navigationItem.title = viewModel?.name
-            tableView.delegate = viewModel
-            tableView.dataSource = viewModel
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.delegate = self.viewModel
+                self.tableView.dataSource = self.viewModel
+                self.tableView.reloadData()
+            }
         }
     }
     @IBOutlet weak var tableView: UITableView!
@@ -23,8 +25,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "n/a"
         
-        CandidateViewModelFactory.getViewModel { (viewModel) in
-            self.viewModel = viewModel
+        fetchViewModel()
+    }
+    
+    func fetchViewModel() {
+        LocalNetworkingManager.sharedManager.downloadCandidate { (result) in
+            if case let .success(response) = result {
+                self.viewModel = CandidateViewModel(candidate: response)
+            } else {
+                self.viewModel = nil
+            }
         }
     }
 }
