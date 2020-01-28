@@ -16,7 +16,7 @@ class LocalNetworkingManagerTests: XCTestCase {
     func test_requestData_fromExistingResource_returnsExpectedData() {
         // Given
         let manager = LocalNetworkingManager.sharedManager
-        guard let url = Bundle(for: LocalNetworkingManagerTests.self).url(forResource: "candidate_test", withExtension: "json") else {
+        guard let url = Bundle(for: type(of: self)).url(forResource: "candidate_test", withExtension: "json") else {
             XCTFail("Seems like test resource is missing.")
             return
         }
@@ -26,9 +26,13 @@ class LocalNetworkingManagerTests: XCTestCase {
         manager.requestData(from: url) { (result) in
             if case let .success(model) = result {
                 // Then
-                let candidate = try! JSONDecoder().decode(Candidate.self, from: model)
-                XCTAssertEqual(candidate, self.stubModel())
-                expectation.fulfill()
+                do {
+                    let root = try JSONDecoder().decode(ResponseRoot.self, from: model)
+                    XCTAssertEqual(root.data, Mocks.stubModel())
+                    expectation.fulfill()
+                } catch {
+                    XCTFail(error.localizedDescription)
+                }
             } else {
                 XCTFail()
             }
@@ -36,7 +40,7 @@ class LocalNetworkingManagerTests: XCTestCase {
         waitForExpectations(timeout: networkingResponseTimeout, handler: nil)
     }
     
-    func test_requestData_fromMalformedResource_failsWithError() {
+    func test_requestData_fromMalformedResource_returnsData() {
         // Given
         let manager = LocalNetworkingManager.sharedManager
         guard let url = Bundle(for: LocalNetworkingManagerTests.self).url(forResource: "candidate_malformed", withExtension: "json") else {
@@ -47,9 +51,9 @@ class LocalNetworkingManagerTests: XCTestCase {
         // When
         let expectation = self.expectation(description: "Manager should fail when fetching malformed data.")
         manager.requestData(from: url) { (result) in
-            if case let .failure(error) = result {
+            if case let .success(data) = result {
                 // Then
-                XCTAssertEqual(error, .parsingFailed)
+                XCTAssertNotNil(data)
                 expectation.fulfill()
             } else {
                 XCTFail()
