@@ -23,6 +23,7 @@
 		EC65652023E0CB77006B80DF /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651F23E0CB77006B80DF /* Mocks.swift */; };
 		EC65652223E0D45D006B80DF /* candidate.json in Resources */ = {isa = PBXBuildFile; fileRef = EC65652123E0D45C006B80DF /* candidate.json */; };
 		EC65652623E0DE72006B80DF /* ExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */; };
+		EC65652C23E1084D006B80DF /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		EC65652123E0D45C006B80DF /* candidate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidate.json; sourceTree = "<group>"; };
 		EC65652423E0DB6E006B80DF /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewModel.swift; sourceTree = "<group>"; };
+		EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				EC6564F123DF707F006B80DF /* LaunchScreen.storyboard */,
 				EC6564F423DF707F006B80DF /* Info.plist */,
 				EC65650823DF72B8006B80DF /* Candidate.swift */,
+				EC65652E23E10854006B80DF /* Views */,
 				EC65652923E0FCDE006B80DF /* View Models */,
 				EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */,
 				EC65652123E0D45C006B80DF /* candidate.json */,
@@ -134,6 +137,14 @@
 				EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		EC65652E23E10854006B80DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 				EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */,
 				EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */,
 				EC65650923DF72B8006B80DF /* Candidate.swift in Sources */,
+				EC65652C23E1084D006B80DF /* ExperienceTableViewCell.swift in Sources */,
 				EC6564EB23DF707D006B80DF /* ViewController.swift in Sources */,
 				EC6564E723DF707D006B80DF /* AppDelegate.swift in Sources */,
 			);
