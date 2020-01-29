@@ -78,9 +78,8 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
                 expCell.update(with: experienceViewModels[indexPath.row])
                 return expCell
             case Layout.Section.faculties.rawValue:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-                cell.textLabel?.text = "School"
-                cell.detailTextLabel?.text = education[indexPath.row].school
+                let cell = tableView.dequeueReusableCell(withIdentifier: "EducationCell", for: indexPath) as! EducationTableViewCell
+                cell.update(with: educationViewModels[indexPath.row])
                 return cell
             default:
                 return tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)

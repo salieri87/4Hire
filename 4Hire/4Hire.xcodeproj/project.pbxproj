@@ -25,6 +25,7 @@
 		EC65652623E0DE72006B80DF /* ExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */; };
 		EC65652C23E1084D006B80DF /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */; };
 		EC96376923E237930018BABB /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376823E237930018BABB /* EducationViewModel.swift */; };
+		EC96376B23E23CE60018BABB /* EducationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376A23E23CE60018BABB /* EducationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewModel.swift; sourceTree = "<group>"; };
 		EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
 		EC96376823E237930018BABB /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
+		EC96376A23E23CE60018BABB /* EducationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */,
+				EC96376A23E23CE60018BABB /* EducationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC96376B23E23CE60018BABB /* EducationTableViewCell.swift in Sources */,
 				EC65652623E0DE72006B80DF /* ExperienceViewModel.swift in Sources */,
 				EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */,
 				EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */,

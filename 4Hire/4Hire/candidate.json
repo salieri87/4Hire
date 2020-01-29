@@ -32,6 +32,12 @@
             "startedAt": "2011/02",
             "finishedAt": "2013/03",
             "jobDescription": "Involved in development of AIML dictionaries for a chat bot."
+        }],
+        "education": [{
+            "school": "University of Science and Technology",
+            "course": "Applied Computer Science",
+            "startedAt": "2006/10",
+            "finishedAt": "2012/06"
         }]
     }
 }
