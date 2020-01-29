@@ -116,9 +116,14 @@ class CandidateTests: XCTestCase {
 
             // Then
             XCTAssertEqual(candidate, Mocks.stubModel())
+            
+            // Checking experience and education, as they are not involved in `Candidate`'s equality!
             XCTAssertEqual(candidate.experience?.first?.company, "cool company name")
             XCTAssertEqual(candidate.experience?.first?.name, "iOS developer")
             XCTAssertEqual(candidate.experience?.first?.jobDescription, "some description")
+            
+            XCTAssertEqual(candidate.education?.first?.school, "Such Cool University")
+            XCTAssertEqual(candidate.education?.first?.course, "Applied Awesomness")
         } catch {
             XCTFail(error.localizedDescription)
         }

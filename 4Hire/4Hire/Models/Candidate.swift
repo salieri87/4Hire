@@ -82,4 +82,32 @@ struct Education: Decodable {
     var startedAt: Date
     var finishedAt: Date?
     var course: String
+    
+    enum Error: Swift.Error {
+        case failedParsingDate
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case school
+        case startedAt
+        case finishedAt
+        case course
+    }
+    
+    init(school: String, startedAt: Date, finishedAt: Date?, course: String) {
+        self.school = school
+        self.startedAt = startedAt
+        self.finishedAt = finishedAt
+        self.course = course
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        school = try container.decode(String.self, forKey: .school)
+        let startedAtString = try container.decode(String.self, forKey: .startedAt)
+        startedAt = try Position.date(from: startedAtString)
+        let finishedAtString = try container.decodeIfPresent(String.self, forKey: .finishedAt)
+        finishedAt = finishedAtString != nil ? try Position.date(from: finishedAtString!) : nil
+        course = try container.decode(String.self, forKey: .course)
+    }
 }

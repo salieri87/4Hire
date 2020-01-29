@@ -9,6 +9,11 @@
             "startedAt": "2010/08",
             "finishedAt": "2019/01",
             "jobDescription": "some description"
+        }],
+        "education": [{
+            "school": "Such Cool University",
+            "course": "Applied Awesomness",
+            "startedAt": "2018/09"
         }]
     }
 }
