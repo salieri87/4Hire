@@ -10,14 +10,8 @@
 import XCTest
 
 class CandidateTests: XCTestCase {
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
+    // MARK: - Candidate
     func test_candidateNamedJohnDoe_hasCorrectValues() {
         // Given
         let firstName = "John"
@@ -58,6 +52,48 @@ class CandidateTests: XCTestCase {
         // Then
         XCTAssertNotEqual(candidate1, candidate2)
     }
+    
+    // MARK: Decodable
+
+    func test_decodingValidCandidate_succeeds() {
+        // Given
+        guard let url = Bundle(for: type(of: self)).url(forResource: "candidate_test", withExtension: "json"),
+            let data = try? Data(contentsOf: url) else {
+            XCTFail("Failed to obtain json data")
+            return
+        }
+
+        do {
+            // When
+            let root = try JSONDecoder().decode(ResponseRoot.self, from: data)
+            let candidate = root.data
+
+            // Then
+            XCTAssertEqual(candidate, Mocks.stubModel())
+            
+            // Checking experience and education, as they are not involved in `Candidate`'s equality!
+            XCTAssertEqual(candidate.experience?.first?.company, "cool company name")
+            XCTAssertEqual(candidate.experience?.first?.name, "iOS developer")
+            XCTAssertEqual(candidate.experience?.first?.jobDescription, "some description")
+            
+            XCTAssertEqual(candidate.education?.first?.school, "Such Cool University")
+            XCTAssertEqual(candidate.education?.first?.course, "Applied Awesomness")
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    func test_decodingInvalidCandidate_failsWithParsingFailedError() {
+        // Given
+        guard let url = Bundle(for: type(of: self)).url(forResource: "candidate_malformed", withExtension: "json"),
+            let data = try? Data(contentsOf: url) else {
+            XCTFail("Failed to obtain json data")
+            return
+        }
+
+        // Then
+        XCTAssertThrowsError(try JSONDecoder().decode(ResponseRoot.self, from: data), "Should throw failed parsing error")
+    }
 
     // MARK: - Position
 
@@ -97,47 +133,5 @@ class CandidateTests: XCTestCase {
         XCTAssertEqual(study.startedAt, Date.distantPast)
         XCTAssertNil(study.finishedAt)
         XCTAssertEqual(study.course, "Apple technologies")
-    }
-
-    // MARK: - Decodable
-
-    func test_decodingValidCandidate_succeeds() {
-        // Given
-        guard let url = Bundle(for: type(of: self)).url(forResource: "candidate_test", withExtension: "json"),
-            let data = try? Data(contentsOf: url) else {
-            XCTFail("Failed to obtain json data")
-            return
-        }
-
-        do {
-            // When
-            let models = try JSONDecoder().decode(ResponseRoot.self, from: data)
-            let candidate = models.data
-
-            // Then
-            XCTAssertEqual(candidate, Mocks.stubModel())
-            
-            // Checking experience and education, as they are not involved in `Candidate`'s equality!
-            XCTAssertEqual(candidate.experience?.first?.company, "cool company name")
-            XCTAssertEqual(candidate.experience?.first?.name, "iOS developer")
-            XCTAssertEqual(candidate.experience?.first?.jobDescription, "some description")
-            
-            XCTAssertEqual(candidate.education?.first?.school, "Such Cool University")
-            XCTAssertEqual(candidate.education?.first?.course, "Applied Awesomness")
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-
-    func test_decodingInvalidCandidate_failsWithParsingFailedError() {
-        // Given
-        guard let url = Bundle(for: type(of: self)).url(forResource: "candidate_malformed", withExtension: "json"),
-            let data = try? Data(contentsOf: url) else {
-            XCTFail("Failed to obtain json data")
-            return
-        }
-
-        // Then
-        XCTAssertThrowsError(try JSONDecoder().decode(ResponseRoot.self, from: data), "Should throw failed parsing error")
     }
 }
