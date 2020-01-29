@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "n/a"
-        
+        tableView.rowHeight = 44.0
         fetchViewModel()
     }
     
@@ -72,23 +72,26 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
         switch indexPath.section {
             case Layout.Section.experience.rawValue:
-                cell.textLabel?.text = "Position"
-                cell.detailTextLabel?.text = experienceViewModels[indexPath.row].shortDescription
+            let expCell = tableView.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as! ExperienceTableViewCell
+                expCell.update(with: experienceViewModels[indexPath.row])
+                return expCell
             case Layout.Section.faculties.rawValue:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
                 cell.textLabel?.text = "School"
                 cell.detailTextLabel?.text = education[indexPath.row].school
+                return cell
             default:
-                assert(false)
+                return tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             }
-    
-        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         Layout.Section(rawValue: section)?.title
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        44.0
     }
 }

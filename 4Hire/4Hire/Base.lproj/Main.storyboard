@@ -44,6 +44,43 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperienceCell" rowHeight="44" id="IuA-cw-6I1" customClass="ExperienceTableViewCell" customModule="_Hire" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IuA-cw-6I1" id="NRi-QB-cul">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k5m-dP-ps7">
+                                                    <rect key="frame" x="20.5" y="1" width="373" height="42"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hGl-M6-SqI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="hGl-M6-SqI" secondAttribute="height" multiplier="1:1" id="AVs-Rd-Y5R"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="job @ company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-LA-b4b">
+                                                            <rect key="frame" x="50" y="0.0" width="323" height="42"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="centerX" secondItem="NRi-QB-cul" secondAttribute="centerX" id="28p-MT-GKV"/>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="width" secondItem="NRi-QB-cul" secondAttribute="width" multiplier="0.9" id="Y5l-fk-Bte"/>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="centerY" secondItem="NRi-QB-cul" secondAttribute="centerY" id="f1A-9j-bA9"/>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="height" secondItem="NRi-QB-cul" secondAttribute="height" multiplier="0.95" id="y2Q-6h-qMj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="companyLogoView" destination="hGl-M6-SqI" id="75e-wc-tU0"/>
+                                            <outlet property="shortDescriptionLabel" destination="FCe-LA-b4b" id="aDJ-aE-Fpi"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
