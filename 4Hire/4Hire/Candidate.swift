@@ -32,6 +32,32 @@ struct Position: Decodable {
     var startedAt: Date
     var finishedAt: Date?
     var jobDescription: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case company
+        case startedAt
+        case finishedAt
+        case jobDescription
+    }
+    
+    init(name: String, company: String, startedAt: Date, finishedAt: Date? = nil, jobDescription: String) {
+        self.name = name
+        self.company = company
+        self.startedAt = startedAt
+        self.finishedAt = finishedAt
+        self.jobDescription = jobDescription
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try container.decode(String.self, forKey: .name)
+        company = try container.decode(String.self, forKey: .company)
+        startedAt = Date.distantPast
+        finishedAt = nil
+        jobDescription = try container.decode(String.self, forKey: .jobDescription)
+    }
+    
 }
 
 /// Wrapper for education background.
