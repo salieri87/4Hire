@@ -2,6 +2,22 @@
     "data": {
         "identifier": 1,
         "firstName": "Filip",
-        "lastName": "Chwastowski"
+        "lastName": "Chwastowski",
+        "experience": [{
+            "name": "iOS junior",
+            "company": "old republic",
+            "startedAt": "",
+            "jobDescription": "some description"
+        }, {
+            "name": "iOS mid",
+            "company": "empire",
+            "startedAt": "",
+            "jobDescription": "some description"
+        }, {
+            "name": "iOS senior",
+            "company": "first order",
+            "startedAt": "",
+            "jobDescription": "some description"
+        }]
     }
 }
