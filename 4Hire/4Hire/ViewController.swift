@@ -61,7 +61,7 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
         case Layout.Section.experience.rawValue:
             return experienceViewModels.count
         case Layout.Section.faculties.rawValue:
-            return education.count
+            return educationViewModels.count
         default:
             return 0
         }

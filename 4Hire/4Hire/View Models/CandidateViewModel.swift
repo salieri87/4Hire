@@ -21,9 +21,9 @@ class CandidateViewModel: NSObject {
         candidate.experience?.map{ ExperienceViewModel(position: $0) } ?? [ExperienceViewModel]()
     }
 
-    /// Candidate's list of past and current faculties.
-    var education: [Education] {
-        candidate.education ?? [Education]()
+    /// View models of candidate's past and current faculties.
+    var educationViewModels: [EducationViewModel] {
+        candidate.education?.map{ EducationViewModel(education: $0) } ?? [EducationViewModel]()
     }
 
     required init(candidate: Candidate) {
