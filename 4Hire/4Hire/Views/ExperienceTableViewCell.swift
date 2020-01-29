@@ -14,8 +14,21 @@ class ExperienceTableViewCell: UITableViewCell {
     @IBOutlet weak var shortDescriptionLabel: UILabel!
     
     func update(with experienceViewModel: ExperienceViewModel) {
-        companyLogoView.image = #imageLiteral(resourceName: "jobIcon")
+        companyLogoView.image = image(for: experienceViewModel.companyName)
         shortDescriptionLabel.text = experienceViewModel.shortDescription
     }
     
+    private func image(for companyName: String) -> UIImage? {
+        switch companyName.lowercased() {
+        case "prophone":
+            return #imageLiteral(resourceName: "prophone")
+        case "webspirit":
+            return #imageLiteral(resourceName: "webspirit")
+        case "estimote":
+            return #imageLiteral(resourceName: "estimote")
+        default:
+            return nil
+        }
+    }
 }
+
