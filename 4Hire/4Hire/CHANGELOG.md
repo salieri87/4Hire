@@ -1,5 +1,8 @@
 # HSBC app changelog
 
+## 0.3
+### Added:
+- Introduced ayout for cells in "Experience" section"
 
 ## 0.2
 ### Added:
