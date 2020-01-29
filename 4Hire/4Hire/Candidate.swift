@@ -33,6 +33,10 @@ struct Position: Decodable {
     var finishedAt: Date?
     var jobDescription: String
     
+    enum Error: Swift.Error {
+        case failedParsingDate
+    }
+    
     enum CodingKeys: String, CodingKey {
         case name
         case company
@@ -53,9 +57,21 @@ struct Position: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decode(String.self, forKey: .name)
         company = try container.decode(String.self, forKey: .company)
-        startedAt = Date.distantPast
-        finishedAt = nil
+        let startedAtString = try container.decode(String.self, forKey: .startedAt)
+        startedAt = try Position.date(from: startedAtString)
+        let finishedAtString = try container.decodeIfPresent(String.self, forKey: .finishedAt)
+        finishedAt = finishedAtString != nil ? try Position.date(from: finishedAtString!) : nil
         jobDescription = try container.decode(String.self, forKey: .jobDescription)
+    }
+    
+    private static func date(from dateString: String) throws -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM"
+        if let result = formatter.date(from: dateString) {
+            return result
+        } else {
+            throw Position.Error.failedParsingDate
+        }
     }
     
 }
