@@ -112,9 +112,13 @@ class CandidateTests: XCTestCase {
         do {
             // When
             let models = try JSONDecoder().decode(ResponseRoot.self, from: data)
+            let candidate = models.data
 
             // Then
-            XCTAssertEqual(models.data, Mocks.stubModel())
+            XCTAssertEqual(candidate, Mocks.stubModel())
+            XCTAssertEqual(candidate.experience?.first?.company, "cool company name")
+            XCTAssertEqual(candidate.experience?.first?.name, "iOS developer")
+            XCTAssertEqual(candidate.experience?.first?.jobDescription, "some description")
         } catch {
             XCTFail(error.localizedDescription)
         }

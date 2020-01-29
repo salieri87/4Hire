@@ -2,6 +2,13 @@
     "data": {
         "identifier": 100,
         "firstName": "David",
-        "lastName": "von Test"
+        "lastName": "von Test",
+        "experience": [{
+            "name": "iOS developer",
+            "company": "cool company name",
+            "startedAt": "2010/08",
+            "finishedAt": "2019/01",
+            "jobDescription": "some description"
+        }]
     }
 }

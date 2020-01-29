@@ -64,7 +64,7 @@ struct Position: Decodable {
         jobDescription = try container.decode(String.self, forKey: .jobDescription)
     }
     
-    private static func date(from dateString: String) throws -> Date {
+    static func date(from dateString: String) throws -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM"
         if let result = formatter.date(from: dateString) {

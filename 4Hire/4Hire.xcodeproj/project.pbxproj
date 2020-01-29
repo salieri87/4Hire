@@ -106,7 +106,7 @@
 				EC6564EF23DF707F006B80DF /* Assets.xcassets */,
 				EC6564F123DF707F006B80DF /* LaunchScreen.storyboard */,
 				EC6564F423DF707F006B80DF /* Info.plist */,
-				EC65650823DF72B8006B80DF /* Candidate.swift */,
+				EC96376723E234600018BABB /* Models */,
 				EC65652E23E10854006B80DF /* Views */,
 				EC65652923E0FCDE006B80DF /* View Models */,
 				EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */,
@@ -145,6 +145,14 @@
 				EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EC96376723E234600018BABB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC65650823DF72B8006B80DF /* Candidate.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
