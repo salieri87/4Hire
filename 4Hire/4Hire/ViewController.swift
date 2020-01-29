@@ -11,10 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     var viewModel: CandidateViewModel? {
         didSet {
-            navigationItem.title = viewModel?.name
+            tableView.delegate = viewModel
+            tableView.dataSource = viewModel
             DispatchQueue.main.async {
-                self.tableView.delegate = self.viewModel
-                self.tableView.dataSource = self.viewModel
+                self.navigationItem.title = self.viewModel?.name
                 self.tableView.reloadData()
             }
         }
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 }
 
 struct Layout {
-    enum Section: Int {
+    enum Section: Int, CaseIterable {
         case experience
         case faculties
         
@@ -68,7 +68,7 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        Layout.Section.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
