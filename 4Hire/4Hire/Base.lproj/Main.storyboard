@@ -52,16 +52,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k5m-dP-ps7">
-                                                    <rect key="frame" x="20.5" y="1" width="373" height="42"/>
+                                                    <rect key="frame" x="20.5" y="5" width="373" height="34"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hGl-M6-SqI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prophone" translatesAutoresizingMaskIntoConstraints="NO" id="hGl-M6-SqI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="hGl-M6-SqI" secondAttribute="height" multiplier="1:1" id="AVs-Rd-Y5R"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="job @ company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-LA-b4b">
-                                                            <rect key="frame" x="50" y="0.0" width="323" height="42"/>
+                                                            <rect key="frame" x="42" y="0.0" width="331" height="34"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                                 <constraint firstItem="k5m-dP-ps7" firstAttribute="centerX" secondItem="NRi-QB-cul" secondAttribute="centerX" id="28p-MT-GKV"/>
                                                 <constraint firstItem="k5m-dP-ps7" firstAttribute="width" secondItem="NRi-QB-cul" secondAttribute="width" multiplier="0.9" id="Y5l-fk-Bte"/>
                                                 <constraint firstItem="k5m-dP-ps7" firstAttribute="centerY" secondItem="NRi-QB-cul" secondAttribute="centerY" id="f1A-9j-bA9"/>
-                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="height" secondItem="NRi-QB-cul" secondAttribute="height" multiplier="0.95" id="y2Q-6h-qMj"/>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="height" secondItem="NRi-QB-cul" secondAttribute="height" constant="-10" id="y2Q-6h-qMj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -122,4 +122,7 @@
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="prophone" width="200" height="200"/>
+    </resources>
 </document>
