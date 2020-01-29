@@ -11,11 +11,13 @@ import UIKit
 class ExperienceTableViewCell: UITableViewCell {
     
     @IBOutlet weak var companyLogoView: UIImageView!
-    @IBOutlet weak var shortDescriptionLabel: UILabel!
+    @IBOutlet weak var roleLabel: UILabel!
+    @IBOutlet weak var datesLabel: UILabel!
     
     func update(with experienceViewModel: ExperienceViewModel) {
         companyLogoView.image = image(for: experienceViewModel.companyName)
-        shortDescriptionLabel.text = experienceViewModel.shortDescription
+        roleLabel.text = experienceViewModel.roleName
+        datesLabel.text = experienceViewModel.simplifiedDateRangeString
     }
     
     private func image(for companyName: String) -> UIImage? {

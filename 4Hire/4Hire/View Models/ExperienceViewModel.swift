@@ -6,10 +6,36 @@
 //  Copyright © 2020 Home. All rights reserved.
 //
 
+import Foundation
+
 struct ExperienceViewModel {
-    /// Simple summary of role's details.
-    var shortDescription: String {
-        get { "\(position.name) @ \(position.company)" }
+    
+    var roleName: String {
+        get {
+            position.name
+        }
+    }
+    
+    var companyName: String {
+        get {
+            position.company
+        }
+    }
+    
+    var roleDescription: String {
+        position.jobDescription
+    }
+    
+    /// Simplified description of position's dates range.
+    var simplifiedDateRangeString: String {
+        get {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM"
+            let startedAt = formatter.string(from: position.startedAt)
+            let finishedAt = position.finishedAt != nil ? formatter.string(from: position.finishedAt!) : "now"
+            
+            return "\(startedAt) - \(finishedAt)"
+        }
     }
     
     private var position: Position
