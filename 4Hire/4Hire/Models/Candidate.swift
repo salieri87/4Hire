@@ -58,22 +58,11 @@ struct Position: Decodable {
         name = try container.decode(String.self, forKey: .name)
         company = try container.decode(String.self, forKey: .company)
         let startedAtString = try container.decode(String.self, forKey: .startedAt)
-        startedAt = try Position.date(from: startedAtString)
+        startedAt = try startedAtString.date()
         let finishedAtString = try container.decodeIfPresent(String.self, forKey: .finishedAt)
-        finishedAt = finishedAtString != nil ? try Position.date(from: finishedAtString!) : nil
+        finishedAt = finishedAtString != nil ? try finishedAtString!.date() : nil
         jobDescription = try container.decode(String.self, forKey: .jobDescription)
     }
-    
-    static func date(from dateString: String) throws -> Date {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM"
-        if let result = formatter.date(from: dateString) {
-            return result
-        } else {
-            throw Position.Error.failedParsingDate
-        }
-    }
-    
 }
 
 /// Wrapper for education background.
@@ -105,9 +94,21 @@ struct Education: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         school = try container.decode(String.self, forKey: .school)
         let startedAtString = try container.decode(String.self, forKey: .startedAt)
-        startedAt = try Position.date(from: startedAtString)
+        startedAt = try startedAtString.date()
         let finishedAtString = try container.decodeIfPresent(String.self, forKey: .finishedAt)
-        finishedAt = finishedAtString != nil ? try Position.date(from: finishedAtString!) : nil
+        finishedAt = finishedAtString != nil ? try finishedAtString!.date() : nil
         course = try container.decode(String.self, forKey: .course)
+    }
+}
+
+fileprivate extension String {
+    func date() throws -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM"
+        if let result = formatter.date(from: self) {
+            return result
+        } else {
+            throw Position.Error.failedParsingDate
+        }
     }
 }
