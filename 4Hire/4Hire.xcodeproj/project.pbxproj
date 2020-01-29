@@ -26,6 +26,7 @@
 		EC65652C23E1084D006B80DF /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */; };
 		EC96376923E237930018BABB /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376823E237930018BABB /* EducationViewModel.swift */; };
 		EC96376B23E23CE60018BABB /* EducationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376A23E23CE60018BABB /* EducationTableViewCell.swift */; };
+		EC96376D23E247290018BABB /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376C23E247290018BABB /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
 		EC96376823E237930018BABB /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
 		EC96376A23E23CE60018BABB /* EducationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewCell.swift; sourceTree = "<group>"; };
+		EC96376C23E247290018BABB /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				EC6564E623DF707D006B80DF /* AppDelegate.swift */,
 				EC6564EA23DF707D006B80DF /* ViewController.swift */,
+				EC96376C23E247290018BABB /* IntroViewController.swift */,
 				EC6564EC23DF707D006B80DF /* Main.storyboard */,
 				EC6564EF23DF707F006B80DF /* Assets.xcassets */,
 				EC6564F123DF707F006B80DF /* LaunchScreen.storyboard */,
@@ -270,6 +273,7 @@
 				EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */,
 				EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */,
 				EC96376923E237930018BABB /* EducationViewModel.swift in Sources */,
+				EC96376D23E247290018BABB /* IntroViewController.swift in Sources */,
 				EC65650923DF72B8006B80DF /* Candidate.swift in Sources */,
 				EC65652C23E1084D006B80DF /* ExperienceTableViewCell.swift in Sources */,
 				EC6564EB23DF707D006B80DF /* ViewController.swift in Sources */,

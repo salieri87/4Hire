@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.title = "n/a"
         tableView.rowHeight = 44.0
         fetchViewModel()
