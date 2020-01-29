@@ -24,6 +24,7 @@
 		EC65652223E0D45D006B80DF /* candidate.json in Resources */ = {isa = PBXBuildFile; fileRef = EC65652123E0D45C006B80DF /* candidate.json */; };
 		EC65652623E0DE72006B80DF /* ExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */; };
 		EC65652C23E1084D006B80DF /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */; };
+		EC96376923E237930018BABB /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376823E237930018BABB /* EducationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		EC65652423E0DB6E006B80DF /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewModel.swift; sourceTree = "<group>"; };
 		EC65652A23E1084D006B80DF /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
+		EC96376823E237930018BABB /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */,
 				EC65652523E0DE72006B80DF /* ExperienceViewModel.swift */,
+				EC96376823E237930018BABB /* EducationViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				EC65652623E0DE72006B80DF /* ExperienceViewModel.swift in Sources */,
 				EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */,
 				EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */,
+				EC96376923E237930018BABB /* EducationViewModel.swift in Sources */,
 				EC65650923DF72B8006B80DF /* Candidate.swift in Sources */,
 				EC65652C23E1084D006B80DF /* ExperienceTableViewCell.swift in Sources */,
 				EC6564EB23DF707D006B80DF /* ViewController.swift in Sources */,
