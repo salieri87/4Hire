@@ -1,8 +1,12 @@
 # HSBC app changelog
 
+## 0.4
+### Added:
+- Introduced layout for cells in "Education" section
+
 ## 0.3
 ### Added:
-- Introduced ayout for cells in "Experience" section"
+- Introduced layout for cells in "Experience" section"
 
 ## 0.2
 ### Added:
