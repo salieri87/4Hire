@@ -9,16 +9,13 @@
 import UIKit
 
 class ExperienceTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBOutlet weak var companyLogoView: UIImageView!
+    @IBOutlet weak var shortDescriptionLabel: UILabel!
+    
+    func update(with experienceViewModel: ExperienceViewModel) {
+        companyLogoView.image = #imageLiteral(resourceName: "jobIcon")
+        shortDescriptionLabel.text = experienceViewModel.shortDescription
     }
     
 }

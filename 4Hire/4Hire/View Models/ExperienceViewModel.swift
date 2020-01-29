@@ -17,6 +17,4 @@ struct ExperienceViewModel {
     init(position: Position) {
         self.position = position
     }
-    
-    
 }
