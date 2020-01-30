@@ -11,8 +11,8 @@ import UIKit
 class ResumeViewController: UIViewController {
     var viewModel: CandidateViewModel? {
         didSet {
-            tableView.delegate = viewModel
-            tableView.dataSource = viewModel
+            tableView.delegate = self
+            tableView.dataSource = self
             DispatchQueue.main.async {
                 self.navigationItem.title = self.viewModel?.name
                 self.tableView.reloadData()
@@ -21,9 +21,16 @@ class ResumeViewController: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView!
     
+    var shouldExpandCells = false {
+        didSet {
+            DispatchQueue.main.async { self.tableView.reloadData() }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false)
+        navigationItem.setRightBarButton(UIBarButtonItem(title: "x", style: .plain, target: self, action: #selector(toggleTableExpansion)), animated: true)
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.title = nil
         tableView.rowHeight = 44.0
@@ -41,6 +48,10 @@ class ResumeViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    @objc func toggleTableExpansion() {
+        shouldExpandCells.toggle()
     }
 }
 
@@ -60,13 +71,14 @@ struct Layout {
     }
 }
 
-extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
+extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case Layout.Section.experience.rawValue:
-            return experienceViewModels.count
+            return viewModel?.experienceViewModels.count ?? 0
         case Layout.Section.faculties.rawValue:
-            return educationViewModels.count
+            return viewModel?.educationViewModels.count ?? 0
         default:
             return 0
         }
@@ -77,14 +89,17 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        assert(viewModel != nil, "Should not reload cell, if no data available!")
+        
         switch indexPath.section {
             case Layout.Section.experience.rawValue:
-            let expCell = tableView.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as! ExperienceTableViewCell
-                expCell.update(with: experienceViewModels[indexPath.row])
+                let expCell = tableView.dequeueReusableCell(withIdentifier: shouldExpandCells ? "ExpandedExperienceCell" : "ExperienceCell", for: indexPath) as! ExperienceTableViewCell
+                expCell.update(with: viewModel!.experienceViewModels[indexPath.row], isExpanded: shouldExpandCells)
                 return expCell
             case Layout.Section.faculties.rawValue:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "EducationCell", for: indexPath) as! EducationTableViewCell
-                cell.update(with: educationViewModels[indexPath.row])
+                cell.update(with: viewModel!.educationViewModels[indexPath.row])
                 return cell
             default:
                 return tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -97,5 +112,9 @@ extension CandidateViewModel: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         44.0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        shouldExpandCells ? UITableView.automaticDimension : 44.0
     }
 }

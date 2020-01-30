@@ -27,23 +27,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k5m-dP-ps7">
-                                                    <rect key="frame" x="20.5" y="5" width="373" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k5m-dP-ps7" userLabel="Simple Content Stack View">
+                                                    <rect key="frame" x="10" y="0.0" width="394" height="44"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prophone" translatesAutoresizingMaskIntoConstraints="NO" id="hGl-M6-SqI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="hGl-M6-SqI" secondAttribute="height" multiplier="1:1" id="AVs-Rd-Y5R"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="role name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-LA-b4b">
-                                                            <rect key="frame" x="42" y="0.0" width="287" height="34"/>
+                                                            <rect key="frame" x="52" y="0.0" width="298" height="44"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dates" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vLG-Ph-jtX" userLabel="dates">
-                                                            <rect key="frame" x="337" y="0.0" width="36" height="34"/>
+                                                            <rect key="frame" x="358" y="0.0" width="36" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="DNN-ho-KTD"/>
                                                             </constraints>
@@ -55,10 +55,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="centerX" secondItem="NRi-QB-cul" secondAttribute="centerX" id="28p-MT-GKV"/>
-                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="width" secondItem="NRi-QB-cul" secondAttribute="width" multiplier="0.9" id="Y5l-fk-Bte"/>
-                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="centerY" secondItem="NRi-QB-cul" secondAttribute="centerY" id="f1A-9j-bA9"/>
-                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="height" secondItem="NRi-QB-cul" secondAttribute="height" constant="-10" id="y2Q-6h-qMj"/>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="centerY" secondItem="NRi-QB-cul" secondAttribute="centerY" id="HMD-j8-lx3"/>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="height" secondItem="NRi-QB-cul" secondAttribute="height" id="PkF-11-20N"/>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="width" secondItem="NRi-QB-cul" secondAttribute="width" constant="-20" id="VRX-uQ-Ala"/>
+                                                <constraint firstItem="k5m-dP-ps7" firstAttribute="centerX" secondItem="NRi-QB-cul" secondAttribute="centerX" id="Xnf-Jw-Vg2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -90,6 +90,68 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpandedExperienceCell" rowHeight="108" id="cRV-VA-rBp" userLabel="ExpandedExperienceCell" customClass="ExperienceTableViewCell" customModule="_Hire" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="143.5" width="414" height="108"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cRV-VA-rBp" id="KVu-16-KgH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Nc-v4-Chc" userLabel="Simple Content Stack View">
+                                                    <rect key="frame" x="10" y="0.0" width="394" height="108"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gqN-9q-kvc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prophone" translatesAutoresizingMaskIntoConstraints="NO" id="879-Yv-k0h">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="879-Yv-k0h" secondAttribute="height" multiplier="1:1" id="d67-TT-dak"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="role name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT2-g8-vDQ">
+                                                                    <rect key="frame" x="52" y="0.0" width="298" height="44"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dates" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-zD-b8p" userLabel="dates">
+                                                                    <rect key="frame" x="358" y="0.0" width="36" height="44"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="lZa-h2-bqq"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="tio-zO-SLl"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="here will go description of what was done during this role employment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpT-DU-bZX">
+                                                            <rect key="frame" x="0.0" y="52" width="394" height="56"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3Nc-v4-Chc" firstAttribute="centerY" secondItem="KVu-16-KgH" secondAttribute="centerY" id="4df-b9-gez"/>
+                                                <constraint firstItem="3Nc-v4-Chc" firstAttribute="height" secondItem="KVu-16-KgH" secondAttribute="height" id="gMd-As-StH"/>
+                                                <constraint firstItem="3Nc-v4-Chc" firstAttribute="centerX" secondItem="KVu-16-KgH" secondAttribute="centerX" id="lbP-DB-Ngr"/>
+                                                <constraint firstItem="3Nc-v4-Chc" firstAttribute="width" secondItem="KVu-16-KgH" secondAttribute="width" constant="-20" id="yYh-QT-cTY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="companyLogoView" destination="879-Yv-k0h" id="Fz2-Y3-f6J"/>
+                                            <outlet property="datesLabel" destination="9n8-zD-b8p" id="DLv-Gp-afc"/>
+                                            <outlet property="jobDescriptionLabel" destination="FpT-DU-bZX" id="p5w-xY-eDr"/>
+                                            <outlet property="roleLabel" destination="UT2-g8-vDQ" id="vVW-OF-cXA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
