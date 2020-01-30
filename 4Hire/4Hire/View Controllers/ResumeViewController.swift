@@ -36,7 +36,9 @@ class ResumeViewController: UIViewController {
                 self.viewModel = CandidateViewModel(candidate: response)
             } else {
                 let alert = UIAlertController(title: "Error", message: "Loading candidate's data failed.", preferredStyle: .alert)
-                present(alert, animated: true, completion: nil)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
