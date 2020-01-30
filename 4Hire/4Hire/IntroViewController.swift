@@ -27,7 +27,6 @@ class IntroViewController: UIViewController {
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()
                 if case let .success(data) = result {
-                    print("YAY")
                     self.avatarView.image = UIImage(data: data)
                 } else {
                     print("failed fetching avatar")
