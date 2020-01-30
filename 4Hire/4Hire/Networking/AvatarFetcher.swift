@@ -11,6 +11,16 @@ import Foundation
 enum AvatarFetchingError: Swift.Error {
     case invalidURL
     case downloadFailed
+    
+    static func ==(lhs: Self, rhs: Self) -> Bool {
+        switch (lhs, rhs) {
+        case (.downloadFailed, .downloadFailed): fallthrough
+        case (.invalidURL, .invalidURL):
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 protocol AvatarDataFetcher {
