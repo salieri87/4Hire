@@ -21,16 +21,22 @@ class ResumeViewController: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView!
     
-    var shouldExpandCells = false {
+    var shouldExpandCells: Bool = false {
         didSet {
-            DispatchQueue.main.async { self.tableView.reloadData() }
+            DispatchQueue.main.async {
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem.menuButton(self, action: #selector(self.toggleTableExpansion), imageName: self.shouldExpandCells ? "shrink" : "expand")
+                if self.shouldExpandCells != oldValue {
+                    self.tableView.reloadSections(IndexSet(integersIn: 0...0), with: UITableView.RowAnimation.top)
+                }
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false)
-        navigationItem.setRightBarButton(UIBarButtonItem(title: "x", style: .plain, target: self, action: #selector(toggleTableExpansion)), animated: true)
+        let button = UIBarButtonItem.menuButton(self, action: #selector(toggleTableExpansion), imageName: "expand")
+        navigationItem.setRightBarButton(button, animated: true)
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.title = nil
         tableView.rowHeight = 44.0
@@ -116,5 +122,21 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         shouldExpandCells ? UITableView.automaticDimension : 44.0
+    }
+}
+
+extension UIBarButtonItem {
+
+    static func menuButton(_ target: Any?, action: Selector, imageName: String) -> UIBarButtonItem {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: imageName), for: .normal)
+        button.addTarget(target, action: action, for: .touchUpInside)
+
+        let menuBarItem = UIBarButtonItem(customView: button)
+        menuBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
+        menuBarItem.customView?.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 24).isActive = true
+
+        return menuBarItem
     }
 }
