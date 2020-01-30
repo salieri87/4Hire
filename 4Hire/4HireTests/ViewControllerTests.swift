@@ -11,10 +11,10 @@ import XCTest
 
 class ViewControllerTests: XCTestCase {
 
-    var viewController: ViewController!
+    var viewController: ResumeViewController!
     
     override func setUp() {
-        guard let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "MainVC") as? ViewController else { assert(false) }
+        guard let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "MainVC") as? ResumeViewController else { assert(false) }
         viewController = vc
         _ = viewController.view
     }

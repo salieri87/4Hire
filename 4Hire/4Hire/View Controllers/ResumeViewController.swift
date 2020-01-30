@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ResumeViewController.swift
 //  4Hire
 //
 //  Created by Filip Chwastowski on 27/01/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ResumeViewController: UIViewController {
     var viewModel: CandidateViewModel? {
         didSet {
             tableView.delegate = viewModel
@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.setHidesBackButton(true, animated: false)
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.title = "n/a"
         tableView.rowHeight = 44.0
