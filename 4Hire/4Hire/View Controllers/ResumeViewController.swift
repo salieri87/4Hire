@@ -26,7 +26,7 @@ class ResumeViewController: UIViewController {
             DispatchQueue.main.async {
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem.menuButton(self, action: #selector(self.toggleTableExpansion), imageName: self.shouldExpandCells ? "shrink" : "expand")
                 if self.shouldExpandCells != oldValue {
-                    self.tableView.reloadSections(IndexSet(integersIn: 0...0), with: UITableView.RowAnimation.top)
+                    self.tableView.reloadData()
                 }
             }
         }

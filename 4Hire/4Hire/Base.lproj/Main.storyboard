@@ -99,7 +99,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Nc-v4-Chc" userLabel="Simple Content Stack View">
-                                                    <rect key="frame" x="10" y="0.0" width="394" height="108"/>
+                                                    <rect key="frame" x="10" y="5" width="394" height="98"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gqN-9q-kvc">
                                                             <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
@@ -111,17 +111,17 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="role name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT2-g8-vDQ">
-                                                                    <rect key="frame" x="52" y="0.0" width="298" height="44"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <rect key="frame" x="52" y="0.0" width="297" height="44"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dates" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-zD-b8p" userLabel="dates">
-                                                                    <rect key="frame" x="358" y="0.0" width="36" height="44"/>
+                                                                    <rect key="frame" x="357" y="0.0" width="37" height="44"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="lZa-h2-bqq"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                     <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -131,8 +131,8 @@
                                                             </constraints>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="here will go description of what was done during this role employment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpT-DU-bZX">
-                                                            <rect key="frame" x="0.0" y="52" width="394" height="56"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="52" width="394" height="46"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -141,7 +141,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="3Nc-v4-Chc" firstAttribute="centerY" secondItem="KVu-16-KgH" secondAttribute="centerY" id="4df-b9-gez"/>
-                                                <constraint firstItem="3Nc-v4-Chc" firstAttribute="height" secondItem="KVu-16-KgH" secondAttribute="height" id="gMd-As-StH"/>
+                                                <constraint firstItem="3Nc-v4-Chc" firstAttribute="height" secondItem="KVu-16-KgH" secondAttribute="height" constant="-10" id="gMd-As-StH"/>
                                                 <constraint firstItem="3Nc-v4-Chc" firstAttribute="centerX" secondItem="KVu-16-KgH" secondAttribute="centerX" id="lbP-DB-Ngr"/>
                                                 <constraint firstItem="3Nc-v4-Chc" firstAttribute="width" secondItem="KVu-16-KgH" secondAttribute="width" constant="-20" id="yYh-QT-cTY"/>
                                             </constraints>
