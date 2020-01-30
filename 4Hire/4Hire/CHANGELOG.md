@@ -1,5 +1,9 @@
 # HSBC app changelog
 
+## 0.6
+### Added:
+- Expanding "Experience" cells is here!
+
 ## 0.5
 ### Added:
 - Intro screen added with an animation of the avatar's position.
