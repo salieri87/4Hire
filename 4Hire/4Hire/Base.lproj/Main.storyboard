@@ -153,12 +153,18 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="WOn-cF-Ovp"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rP1-Vu-V9S">
+                                <rect key="frame" x="188.5" y="482.5" width="37" height="37"/>
+                                <color key="color" red="0.56320457560000003" green="0.071468017940000003" blue="0.066106328229999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3p0-Qd-mqT" firstAttribute="top" secondItem="4HT-Zi-rcS" secondAttribute="bottom" constant="57" id="EyH-EA-w5T"/>
+                            <constraint firstItem="rP1-Vu-V9S" firstAttribute="centerY" secondItem="4HT-Zi-rcS" secondAttribute="centerY" id="H4j-4c-tPH"/>
                             <constraint firstItem="4HT-Zi-rcS" firstAttribute="centerY" secondItem="Sjd-rA-ZXQ" secondAttribute="centerY" id="WeK-79-xjs"/>
                             <constraint firstItem="3p0-Qd-mqT" firstAttribute="centerX" secondItem="4HT-Zi-rcS" secondAttribute="centerX" id="Xpe-Br-YDx"/>
+                            <constraint firstItem="rP1-Vu-V9S" firstAttribute="centerX" secondItem="4HT-Zi-rcS" secondAttribute="centerX" id="miy-gH-3KB"/>
                             <constraint firstItem="4HT-Zi-rcS" firstAttribute="centerX" secondItem="Sjd-rA-ZXQ" secondAttribute="centerX" id="o8j-np-WhM"/>
                             <constraint firstItem="4HT-Zi-rcS" firstAttribute="leading" secondItem="Sjd-rA-ZXQ" secondAttribute="leading" constant="87" id="t1x-uq-LNK"/>
                         </constraints>
@@ -168,6 +174,7 @@
                     <connections>
                         <outlet property="avatarView" destination="4HT-Zi-rcS" id="r9z-mB-8hh"/>
                         <outlet property="nextButton" destination="3p0-Qd-mqT" id="Vqe-bz-qL5"/>
+                        <outlet property="spinner" destination="rP1-Vu-V9S" id="cij-Rh-Kpg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPL-yh-dD1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

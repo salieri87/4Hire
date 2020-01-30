@@ -9,24 +9,29 @@
 import UIKit
 
 class IntroViewController: UIViewController {
-    
-    @IBOutlet weak var avatarView: UIImageView!
-    @IBOutlet weak var nextButton: UIButton!
-    
+    @IBOutlet var avatarView: UIImageView!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var spinner: UIActivityIndicatorView!
+
     private var fetcher = GithubAvatarFetcher()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
-        
-        fetcher.downloadAvatarData(of: "chwastek") { (result) in
-            if case let .success(data) = result {
-                print("YAY")
-                DispatchQueue.main.async {
+        fetchAvatar()
+    }
+    
+    func fetchAvatar() {
+        spinner.startAnimating()
+        fetcher.downloadAvatarData(of: "chwastek") { result in
+            DispatchQueue.main.async {
+                self.spinner.stopAnimating()
+                if case let .success(data) = result {
+                    print("YAY")
                     self.avatarView.image = UIImage(data: data)
+                } else {
+                    print("failed fetching avatar")
                 }
-            } else {
-                print("failed fetching avatar")
             }
         }
     }
