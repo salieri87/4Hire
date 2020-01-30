@@ -25,7 +25,7 @@ class ResumeViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false)
         navigationController?.setNavigationBarHidden(false, animated: false)
-        navigationItem.title = "n/a"
+        navigationItem.title = nil
         tableView.rowHeight = 44.0
         fetchViewModel()
     }
@@ -35,7 +35,8 @@ class ResumeViewController: UIViewController {
             if case let .success(response) = result {
                 self.viewModel = CandidateViewModel(candidate: response)
             } else {
-                self.viewModel = nil
+                let alert = UIAlertController(title: "Error", message: "Loading candidate's data failed.", preferredStyle: .alert)
+                present(alert, animated: true, completion: nil)
             }
         }
     }
