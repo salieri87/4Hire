@@ -141,13 +141,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4HT-Zi-rcS">
-                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <rect key="frame" x="87" y="1028" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4HT-Zi-rcS" secondAttribute="height" multiplier="1:1" id="H8U-Js-hJJ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3p0-Qd-mqT">
-                                <rect key="frame" x="154" y="625" width="106" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3p0-Qd-mqT">
+                                <rect key="frame" x="154" y="1325" width="106" height="30"/>
                                 <state key="normal" title="See my resume"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="WOn-cF-Ovp"/>
@@ -162,7 +162,7 @@
                         <constraints>
                             <constraint firstItem="rP1-Vu-V9S" firstAttribute="centerX" secondItem="Gih-PN-9FL" secondAttribute="centerX" id="45r-Jj-fcr"/>
                             <constraint firstItem="3p0-Qd-mqT" firstAttribute="top" secondItem="4HT-Zi-rcS" secondAttribute="bottom" constant="57" id="EyH-EA-w5T"/>
-                            <constraint firstItem="4HT-Zi-rcS" firstAttribute="centerY" secondItem="Gih-PN-9FL" secondAttribute="centerY" id="WeK-79-xjs"/>
+                            <constraint firstItem="4HT-Zi-rcS" firstAttribute="centerY" secondItem="Gih-PN-9FL" secondAttribute="centerY" constant="700" id="WeK-79-xjs"/>
                             <constraint firstItem="3p0-Qd-mqT" firstAttribute="centerX" secondItem="4HT-Zi-rcS" secondAttribute="centerX" id="Xpe-Br-YDx"/>
                             <constraint firstItem="4HT-Zi-rcS" firstAttribute="centerX" secondItem="Sjd-rA-ZXQ" secondAttribute="centerX" id="o8j-np-WhM"/>
                             <constraint firstItem="rP1-Vu-V9S" firstAttribute="centerY" secondItem="Gih-PN-9FL" secondAttribute="centerY" id="oSE-oQ-pul"/>
@@ -173,6 +173,7 @@
                     <navigationItem key="navigationItem" id="vFQ-te-Fv9"/>
                     <connections>
                         <outlet property="avatarView" destination="4HT-Zi-rcS" id="r9z-mB-8hh"/>
+                        <outlet property="avatarYContstraint" destination="WeK-79-xjs" id="6Tt-Zz-bjs"/>
                         <outlet property="nextButton" destination="3p0-Qd-mqT" id="Vqe-bz-qL5"/>
                         <outlet property="spinner" destination="rP1-Vu-V9S" id="cij-Rh-Kpg"/>
                     </connections>
