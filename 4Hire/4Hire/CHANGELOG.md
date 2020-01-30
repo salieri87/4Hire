@@ -1,5 +1,9 @@
 # HSBC app changelog
 
+## 0.5
+### Added:
+- Intro screen added with an animation of the avatar's position.
+
 ## 0.4
 ### Added:
 - Introduced layout for cells in "Education" section
