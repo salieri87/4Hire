@@ -1,0 +1,43 @@
+{
+    "data": {
+        "identifier": 1,
+        "firstName": "Filip",
+        "lastName": "Chwastowski",
+        "experience": [{
+            "name": "iOS developer",
+            "company": "Estimote",
+            "startedAt": "2014/04",
+            "jobDescription": "Responsible for creating both internal and public tools, libraries, and apps for iOS platform. Mostly focused on SDKs, sometimes jumping in to help with a POC app."
+        }, {
+            "name": "iOS developer",
+            "company": "Webspirit",
+            "startedAt": "2013/10",
+            "finishedAt": "2013/12",
+            "jobDescription": "Redesign and development of new version of dating app."
+        }, {
+            "name": "iOS developer",
+            "company": "Prophone",
+            "startedAt": "2011/09",
+            "finishedAt": "2013/09",
+            "jobDescription": "Replicated previous project (for Java ME) onto iOS platform, a medical app instructing how to proceed with CPR."
+        }, {
+            "name": "Java junior developer (ME)",
+            "company": "Prophone",
+            "startedAt": "2011/03",
+            "finishedAt": "2013/09",
+            "jobDescription": "Continued working on Java ME midlet, a medical app instructing how to proceed with CPR."
+        }, {
+            "name": "AIML junior developer",
+            "company": "Prophone",
+            "startedAt": "2011/02",
+            "finishedAt": "2013/03",
+            "jobDescription": "Involved in development of AIML dictionaries for a chat bot."
+        }],
+        "education": [{
+            "school": "University of Science and Technology",
+            "course": "Applied Computer Science",
+            "startedAt": "2006/10",
+            "finishedAt": "2012/06"
+        }]
+    }
+}
