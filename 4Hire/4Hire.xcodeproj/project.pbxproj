@@ -16,8 +16,8 @@
 		EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650A23DF73DC006B80DF /* CandidateTests.swift */; };
 		EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */; };
 		EC65650F23DFA1F7006B80DF /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */; };
-		EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */; };
-		EC65651A23E0AD62006B80DF /* LocalNetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */; };
+		EC65651823DFB2DB006B80DF /* CandidateFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651723DFB2DB006B80DF /* CandidateFetcher.swift */; };
+		EC65651A23E0AD62006B80DF /* LocalCandidateFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651923E0AD62006B80DF /* LocalCandidateFetcherTests.swift */; };
 		EC65651C23E0C91B006B80DF /* candidate_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EC65651B23E0C91B006B80DF /* candidate_test.json */; };
 		EC65651E23E0C92C006B80DF /* candidate_malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = EC65651D23E0C92C006B80DF /* candidate_malformed.json */; };
 		EC65652023E0CB77006B80DF /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65651F23E0CB77006B80DF /* Mocks.swift */; };
@@ -27,6 +27,7 @@
 		EC96376923E237930018BABB /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376823E237930018BABB /* EducationViewModel.swift */; };
 		EC96376B23E23CE60018BABB /* EducationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376A23E23CE60018BABB /* EducationTableViewCell.swift */; };
 		EC96376D23E247290018BABB /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376C23E247290018BABB /* IntroViewController.swift */; };
+		EC96377023E24FD30018BABB /* AvatarFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96376F23E24FD30018BABB /* AvatarFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +54,8 @@
 		EC65650A23DF73DC006B80DF /* CandidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateTests.swift; sourceTree = "<group>"; };
 		EC65650C23DF91F0006B80DF /* CandidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateViewModel.swift; sourceTree = "<group>"; };
 		EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
-		EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkingManager.swift; sourceTree = "<group>"; };
-		EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkingManagerTests.swift; sourceTree = "<group>"; };
+		EC65651723DFB2DB006B80DF /* CandidateFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateFetcher.swift; sourceTree = "<group>"; };
+		EC65651923E0AD62006B80DF /* LocalCandidateFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCandidateFetcherTests.swift; sourceTree = "<group>"; };
 		EC65651B23E0C91B006B80DF /* candidate_test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidate_test.json; sourceTree = "<group>"; };
 		EC65651D23E0C92C006B80DF /* candidate_malformed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidate_malformed.json; sourceTree = "<group>"; };
 		EC65651F23E0CB77006B80DF /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		EC96376823E237930018BABB /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
 		EC96376A23E23CE60018BABB /* EducationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewCell.swift; sourceTree = "<group>"; };
 		EC96376C23E247290018BABB /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		EC96376F23E24FD30018BABB /* AvatarFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +118,7 @@
 				EC96376723E234600018BABB /* Models */,
 				EC65652E23E10854006B80DF /* Views */,
 				EC65652923E0FCDE006B80DF /* View Models */,
-				EC65651723DFB2DB006B80DF /* LocalNetworkingManager.swift */,
+				EC96376E23E24FA90018BABB /* Networking */,
 				EC65652123E0D45C006B80DF /* candidate.json */,
 				EC65652423E0DB6E006B80DF /* CHANGELOG.md */,
 			);
@@ -128,7 +130,7 @@
 			children = (
 				EC65650A23DF73DC006B80DF /* CandidateTests.swift */,
 				EC65650E23DFA1F7006B80DF /* ViewControllerTests.swift */,
-				EC65651923E0AD62006B80DF /* LocalNetworkingManagerTests.swift */,
+				EC65651923E0AD62006B80DF /* LocalCandidateFetcherTests.swift */,
 				EC65651F23E0CB77006B80DF /* Mocks.swift */,
 				EC65651B23E0C91B006B80DF /* candidate_test.json */,
 				EC65651D23E0C92C006B80DF /* candidate_malformed.json */,
@@ -162,6 +164,15 @@
 				EC65650823DF72B8006B80DF /* Candidate.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EC96376E23E24FA90018BABB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EC65651723DFB2DB006B80DF /* CandidateFetcher.swift */,
+				EC96376F23E24FD30018BABB /* AvatarFetcher.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +281,11 @@
 			files = (
 				EC96376B23E23CE60018BABB /* EducationTableViewCell.swift in Sources */,
 				EC65652623E0DE72006B80DF /* ExperienceViewModel.swift in Sources */,
-				EC65651823DFB2DB006B80DF /* LocalNetworkingManager.swift in Sources */,
+				EC65651823DFB2DB006B80DF /* CandidateFetcher.swift in Sources */,
 				EC65650D23DF91F0006B80DF /* CandidateViewModel.swift in Sources */,
 				EC96376923E237930018BABB /* EducationViewModel.swift in Sources */,
 				EC96376D23E247290018BABB /* IntroViewController.swift in Sources */,
+				EC96377023E24FD30018BABB /* AvatarFetcher.swift in Sources */,
 				EC65650923DF72B8006B80DF /* Candidate.swift in Sources */,
 				EC65652C23E1084D006B80DF /* ExperienceTableViewCell.swift in Sources */,
 				EC6564EB23DF707D006B80DF /* ViewController.swift in Sources */,
@@ -287,7 +299,7 @@
 			files = (
 				EC65650F23DFA1F7006B80DF /* ViewControllerTests.swift in Sources */,
 				EC65650B23DF73DC006B80DF /* CandidateTests.swift in Sources */,
-				EC65651A23E0AD62006B80DF /* LocalNetworkingManagerTests.swift in Sources */,
+				EC65651A23E0AD62006B80DF /* LocalCandidateFetcherTests.swift in Sources */,
 				EC65652023E0CB77006B80DF /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

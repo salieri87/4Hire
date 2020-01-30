@@ -31,18 +31,18 @@ enum FetchingError: Swift.Error, Equatable {
     }
 }
 
-protocol NetworkingManager {
+protocol CandidateFetcher {
     typealias FetchResult = Result<Candidate, FetchingError>
     func downloadCandidate(completion: @escaping (FetchResult) -> Void)
 }
 
 /// Handles fetching `Candidate`s objects from local storage.
-class LocalNetworkingManager : NetworkingManager{
-    static var sharedManager = LocalNetworkingManager()
+class LocalCandidateFetcher : CandidateFetcher{
+    static var sharedManager = LocalCandidateFetcher()
     
     /// Downloads candidate's details.
     /// - Parameter completion: Completion containing fetching result.
-    func downloadCandidate(completion: @escaping (LocalNetworkingManager.FetchResult) -> Void) {
+    func downloadCandidate(completion: @escaping (LocalCandidateFetcher.FetchResult) -> Void) {
         guard let url = Bundle(for: type(of: self)).url(forResource: "candidate", withExtension: "json") else {
             completion(.failure(.invalidURL))
             return

@@ -1,5 +1,5 @@
 //
-//  LocalNetworkingManagerTests.swift
+//  LocalCandidateFetcherTests.swift
 //  4HireTests
 //
 //  Created by Filip Chwastowski on 28/01/2020.
@@ -9,13 +9,13 @@
 import XCTest
 @testable import _Hire
 
-class LocalNetworkingManagerTests: XCTestCase {
+class LocalCandidateFetcherTests: XCTestCase {
     
     let networkingResponseTimeout = 0.1
 
     func test_requestData_fromExistingResource_returnsExpectedData() {
         // Given
-        let manager = LocalNetworkingManager.sharedManager
+        let manager = LocalCandidateFetcher.sharedManager
         guard let url = Bundle(for: type(of: self)).url(forResource: "candidate_test", withExtension: "json") else {
             XCTFail("Seems like test resource is missing.")
             return
@@ -42,8 +42,8 @@ class LocalNetworkingManagerTests: XCTestCase {
     
     func test_requestData_fromMalformedResource_returnsData() {
         // Given
-        let manager = LocalNetworkingManager.sharedManager
-        guard let url = Bundle(for: LocalNetworkingManagerTests.self).url(forResource: "candidate_malformed", withExtension: "json") else {
+        let manager = LocalCandidateFetcher.sharedManager
+        guard let url = Bundle(for: LocalCandidateFetcherTests.self).url(forResource: "candidate_malformed", withExtension: "json") else {
             XCTFail("Seems like test resource is missing.")
             return
         }

@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     func fetchViewModel() {
-        LocalNetworkingManager.sharedManager.downloadCandidate { (result) in
+        LocalCandidateFetcher.sharedManager.downloadCandidate { (result) in
             if case let .success(response) = result {
                 self.viewModel = CandidateViewModel(candidate: response)
             } else {
