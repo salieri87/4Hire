@@ -12,21 +12,22 @@ class IntroViewController: UIViewController {
     
     @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
+    
+    private var fetcher = GithubAvatarFetcher()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        fetcher.downloadAvatarData(of: "chwastek") { (result) in
+            if case let .success(data) = result {
+                print("YAY")
+                DispatchQueue.main.async {
+                    self.avatarView.image = UIImage(data: data)
+                }
+            } else {
+                print("failed fetching avatar")
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
